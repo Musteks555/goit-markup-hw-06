@@ -68,19 +68,10 @@ fieldset {
     justify-content: space-between;
 
     width: 100%;
-
-    /* margin-right: auto; */
 }
 
 .header-nav-list {
     display: none;
-
-    /* Для ПК */
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 40px; */
 }
 
 .logo {
@@ -95,8 +86,6 @@ fieldset {
     display: inline-block;
 
     padding: 16px 0;
-
-    /* margin-right: 76px; */
 }
 
 .header .logo span {
@@ -190,7 +179,7 @@ fieldset {
     align-items: center;
     justify-content: center;
 
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/intro-bg.jpg');
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/intro-bg-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -279,23 +268,11 @@ fieldset {
     flex-direction: column;
 
     gap: 72px;
-
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 24px; */
 }
 
 .card-list-item {
     display: block;
     width: 100%;
-
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    width: calc((100% - 48px) / 3); */
 }
 
 .card-list-item-content {
@@ -342,19 +319,6 @@ fieldset {
 
 .advantages-icon-container {
     display: none;
-
-    /* border-radius: 4px;
-    border: 1px solid #8e8f99;
-    background: #f4f4fd;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 24px 100px;
-    margin-bottom: 8px;
-
-    height: 112px; */
 }
 
 .advantages .card-list-title {
@@ -512,6 +476,10 @@ fieldset {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio .card-list-img {
+    width: 288px;
+}
+
 /* footer */
 .footer {
     background: #2e2f42;
@@ -594,7 +562,6 @@ fieldset {
 
     margin-bottom: 16px;
 
-    /* display: inline-block; */
     display: block;
     text-align: center;
 }
@@ -983,26 +950,7 @@ fieldset {
     border: 1px solid #e7e9fc;
 
     background-color: inherit;
-
-    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
-
-/* .menu-close-btn:hover,
-.menu-close-btn:focus {
-    background-color: #404bbf;
-    border: none;
-}
-
-.menu-close-icon {
-    fill: #2e2f42;
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-close-btn:hover .menu-close-icon,
-.menu-close-btn:focus .menu-close-icon {
-    fill: #ffffff;
-} */
 
 .menu-list {
     display: flex;
@@ -1140,6 +1088,8 @@ fieldset {
     /* intro */
     .intro {
         padding: 112px 0;
+
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/intro-bg-laptop.jpg');
     }
 
     .intro-title {
@@ -1172,7 +1122,7 @@ fieldset {
         row-gap: 72px;
     }
 
-    .portfolio img {
+    .portfolio .card-list-img {
         width: 356px;
     }
 
@@ -1271,6 +1221,9 @@ fieldset {
         /* intro */
         .intro {
             padding: 188px 0;
+
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/intro-bg-desktop.jpg');
         }
 
         .intro-title {
@@ -1322,11 +1275,11 @@ fieldset {
             row-gap: 48px;
         }
 
-        .portfolio img {
+        .portfolio .card-list-item {
             width: 360px;
         }
 
-        .portfolio .card-list-item {
+        .portfolio .card-list-img {
             width: 360px;
         }
 
@@ -1367,9 +1320,24 @@ fieldset {
         }
     }
 
-    @media (min-resolution: 192dpi) {
+    @media (min-resolution: 192dpi) and (max-width: 767px) {
         .intro {
-            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/intro-bg@2x.jpg');
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/intro-bg-mobile@2x.jpg');
+        }
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 768px) {
+        .intro {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/intro-bg-laptop@2x.jpg');
+        }
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 1158px) {
+        .intro {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/intro-bg-desktop@2x.jpg');
         }
     }
 }
